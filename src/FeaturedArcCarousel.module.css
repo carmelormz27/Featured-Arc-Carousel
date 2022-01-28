@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+
+.root {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 16px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  cursor: grab;
+}
+
+.container:active {
+  cursor: grabbing;
+}
+
+.persons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.person {
+  position: absolute;
+  height: 100%;
+  user-select: none;
+}
+
+.person img {
+  position: relative;
+  pointer-events: none;
+  width: 243px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* .person.active img {
+  border: 10px solid cadetblue;
+} */
