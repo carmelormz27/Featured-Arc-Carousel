@@ -148,7 +148,9 @@ const FeaturedArcCarousel = ({
                   onAnimationStart={() => setIsDragging(true)}
                   onAnimationComplete={() => setIsDragging(false)}
                 >
-                  <img src={slide.imageUrl} alt="" />
+                  <div className="carousel-card-img-container">
+                    <img src={slide.imageUrl} alt="" />
+                  </div>
                 </motion.div>
               );
             })}
