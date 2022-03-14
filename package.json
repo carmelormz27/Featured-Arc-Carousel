@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "aws s3 cp ./build/static/js/main.873e4407.js s3://webflow-react-int/ --acl public-read",
+    "deploy": "aws s3 cp ./build/static/js/main.e79b963d.js s3://webflow-react-int/ --acl public-read",
     "webflow": "npm run build && npm run deploy"
   },
   "eslintConfig": {
