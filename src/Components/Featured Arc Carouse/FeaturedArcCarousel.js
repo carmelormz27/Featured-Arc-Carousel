@@ -26,10 +26,13 @@ const FeaturedArcCarousel = ({
   const [paginationPosition, setPaginationPosition] = useState(0);
   const [paginationWidth, setPaginationWidth] = useState(0);
 
+  const [isMounting, setIsMounting] = useState(true);
+
   const onUpdate = (latest) => {
     const activeIndex = getActiveIndex(slidesRef.current);
     setPaginationPosition(paginationWidth * slides[activeIndex].index);
     setCoordX(latest.x);
+    setIsMounting(false);
   };
 
   const handleModifyTarget = (target) => {
@@ -98,7 +101,9 @@ const FeaturedArcCarousel = ({
       setCardDetail(slides[activeIndex].subtitle);
       setCardUrl(slides[activeIndex].url);
 
-      triggerSwapAnalyticsEvent();
+      if (!isMounting) {
+        triggerSwapAnalyticsEvent();
+      }
     }
     setPaginationPosition(paginationWidth * slides[activeIndex].index);
   }, [isDragging]);
@@ -166,7 +171,7 @@ const FeaturedArcCarousel = ({
             rel="noreferrer"
             onClick={buttonClickHandler}
           >
-            Ver Ahora
+            Stream ahora
           </a>
         </div>
       </div>

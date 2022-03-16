@@ -21,7 +21,6 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: 40px;
 }
 
 .carousel-container:active {
@@ -53,7 +52,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow: hidden;
   border-radius: 9px;
   object-fit: cover;
@@ -61,14 +60,14 @@ body {
 
 .carousel-content {
   position: absolute;
-  bottom: 0;
+  bottom: 6%;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.label-2--medium {
+/* .label-2--medium {
   margin: 0;
   font-size: 16px;
   line-height: 28px;
@@ -80,7 +79,7 @@ body {
   font-size: 14px;
   letter-spacing: -0.015em;
   line-height: 19.2px;
-}
+} */
 
 .feature-card-title {
   margin-bottom: 8px;
@@ -112,9 +111,14 @@ body {
   border-radius: 3px;
   border-color: transparent;
   text-decoration: none;
+  align-self: center;
 }
 
 @media (min-width: 768px) {
+  .carousel-content {
+    bottom: 0;
+  }
+
   .carousel-container {
     height: 50vw;
     max-height: 47vw;
@@ -123,7 +127,6 @@ body {
 
   .carousel-card {
     width: 17.5vw;
-    height: calc(17.5vw * 1.5);
   }
 
   .carousel-card-img-container {
@@ -137,7 +140,7 @@ body {
   }
 
   .feature-card-detail {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .featured-carousel-cta {
